@@ -1,0 +1,174 @@
+@use "components";
+
+@mixin size-genral{
+    width: 100%;
+    max-width: 992px;
+    margin: auto;
+    padding: 3rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.barra-navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+    width: 100%;
+    border-bottom: solid 1px #756c6c;
+    
+}
+.logo img{
+    max-width: 8rem;
+    max-height: 5rem;
+}
+.sec-home{
+    display: flex;
+    align-items: center;
+    @include size-genral();
+    .home-cta{
+        margin-right: 5rem;
+        flex: 1;
+        .cta-text{
+            color: components.$color-main;
+        }
+        .home-title{
+            width: 20rem;
+        }
+    }
+   
+    .home-img{
+        .img{
+            max-height: 35rem;
+            border-radius: 1.5rem;
+            box-shadow: 2px 2px 2px 2px rgb(133, 131, 131);
+        }
+    }
+}
+.sec-features{
+    @include size-genral();
+    .intro{
+         text-align: center;
+        h3{
+        font-size: 1.8rem;
+        }
+        p{
+            color: #888;
+            font-size: 0.8rem;
+        }
+    }
+    .features{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        //margin: 3rem;
+        .text{            
+            padding: 2rem 0;
+            flex: 1;
+            .feature{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .description{
+                    text-align: start;
+                    margin-left: 1rem;
+                    max-width: 20rem;
+                    .description-title{
+                        font-size: 1.25rem;
+                    }
+                    .description-text{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .image{
+            img{
+                max-width: 20rem;
+            }
+            
+        }
+    }
+}
+.sec-benefits{
+    border-top: 1px solid #ddd;
+    .intro{
+        padding-top: 2rem;
+        text-align: center;
+        h3{
+        font-size: 1.8rem;
+           }
+        p{
+            color: #888;
+            font-size: 0.8rem;
+        }
+       
+    }
+    .benefits-cards{
+        width: 100%;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+.sec-kpis{
+    color: white;
+    padding: 3rem;
+    background-color: components.$color-main;
+    width: 100%;
+    .kpi{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .numbre{
+        font-size: 3.5rem;
+        font-weight: 600;
+      }
+      .desc{
+        font-size: 0.9rem;
+        color: #ffffffaa;
+      }
+    }
+}
+.sec-onboarding{
+    .intro{
+        padding-top: 2rem;
+        text-align: center;
+        h3{
+        font-size: 1.8rem;
+           }
+        p{
+            color: #888;
+            font-size: 0.8rem;
+        }
+    }
+    .steps{
+        display: flex;
+        padding: 0 7rem 5rem 7rem;
+        align-items: center;
+        justify-content: center;
+        .step-separator{
+            flex: 1;
+            border-top: 2px solid #ddd;
+            margin: 0 1.5rem;
+        }
+
+    }
+}
+.sec-footer-cta{
+    background-color: components.$color-footer;
+    padding: 5rem;
+    background-image: url("../assets/img/rombo.png");
+    background-repeat: no-repeat;
+    background-position: 80%;
+    background-size: 3rem;
+    .footer-cta{
+        width: 50%;
+    
+        .cta-title{
+        font-size: 2rem;
+        }
+        .cta-description{
+        font-size: 1.1rem;
+        }
+    }
+}
